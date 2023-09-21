@@ -1,0 +1,33 @@
+import java.util.Scanner;
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner Scanner = new Scanner(System.in);
+	    Random random = new Random();
+	    int tamArray = 1;
+	    
+	    int[] nAleatorios = new int[tamArray];
+    	for (int i = 0; i < tamArray; i++){
+    	     nAleatorios[i] = random.nextInt(1);
+    	    
+    	}
+    	System.out.println("BUSCAR NÚMERO: ");
+    	 int nBuscado = Scanner.nextInt();
+    	 boolean nEncontrado = false;
+    	 for (int n : nAleatorios ){
+    	    if(n == nBuscado){
+    	        nEncontrado = true;
+    	        break;
+    	    }
+    	    
+    	 }
+    	 if(nEncontrado){
+    	     System.out.println("O NÚMERO " + nBuscado + " ESTÁ NO ARRAY");
+    	 }else{
+    	     System.out.println("O NÚMERO " + nBuscado + " NÃO ESTÁ NO ARRAY");    
+    	 }
+    	 
+	    
+	}
+}

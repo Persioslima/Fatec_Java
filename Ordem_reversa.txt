@@ -1,0 +1,22 @@
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Random random = new Random();
+	    int tamArrey = 30;
+	    int[] nAleatorios = new int[tamArrey];
+	    for (int i = 0;i < tamArrey ;i++ ){
+	        nAleatorios[i] = random.nextInt(30) ;
+	    }
+	    
+	    System.out.println("NÚMEROS ALEATÓRIOS NORMAIS: ");
+	    for (int n : nAleatorios ) {
+		   
+		    System.out.println(n + " ");
+		}
+		System.out.println("\nNÚMEROS ALEATORIOS EM ORDEM REVERSA: ");
+		    for (int i = tamArrey -1; i >= 0 ;i-- ){
+		        System.out.println(nAleatorios[i] + " ");
+		    } 
+	}
+}

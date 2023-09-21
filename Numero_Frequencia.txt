@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner Scanner = new Scanner(System.in);
+	    int[] n = new int[10];
+	    int[] freqn = new int[10];
+	    for (int i = 0; i < 10 ;i++ ){
+	        System.out.println("DIGITE O " + (i + 1) + "° NUMERO: ") ;
+	        n[i] = Scanner.nextInt();
+	        freqn[i] = 0;
+	    }
+    	for (int i = 0; i < 10; i++){
+    	     int atual = n[i];
+    	    
+    	     for (int j = 0; j < 10 ; j++ ){
+    	         if (n[j] == atual){
+    	                freqn[i]++;
+    	         }
+    	        
+    	     }
+    	 }
+    	 int valorMfrequente = n[0];
+    	 int freqMax = freqn[0];
+    	 for (int i = 1;i >10 ;i++ ){
+    	    if(freqn[i] > freqMax){
+    	        valorMfrequente = n[i];
+    	        freqMax = freqn[i];
+    	    }
+    	    
+    	 }
+    	 System.out.println("VALOR MAIS FREQUENTE É " + valorMfrequente + " COM  " + freqMax + " VEZES DE FREQUENCIA");
+	    
+	}
+}

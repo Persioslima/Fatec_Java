@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner Scanner = new Scanner(System.in);
+	    Random random = new Random();
+	    int sete = 0;
+	    
+    	for (int i = 0; i < 100; i++){
+    	     int dado1 = random.nextInt(6);
+    	     int dado2 = random.nextInt(6);
+    	     int soma = dado1 + dado2;
+    	     if(soma == 7){
+    	         sete++;
+    	     }
+    	    
+    	}
+    	System.out.println("O RESULTADO FOI 7 EM " + sete +" LANÇAMENTOS");
+    	 
+    	 
+	    
+	}
+}

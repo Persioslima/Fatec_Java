@@ -1,0 +1,19 @@
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Random random = new Random();
+	    int tamArrey = 50;
+	    int[] nAleatorios = new int[tamArrey];
+	    for (int i = 0;i < tamArrey ;i++ ){
+	        nAleatorios[i] = random.nextInt(10) ;
+	    }
+	    int[] freqn = new int[10];
+	    for (int n : nAleatorios ) {
+		    freqn[n ]++;
+		}
+		for (int i = 0; i < 10 ;i++ ){
+		        System.out.println("NÚMERO " +(i + 1 ) + " APARECE " + freqn[i] + " VEZES");
+		    } 
+	}
+}
