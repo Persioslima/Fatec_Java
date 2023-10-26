@@ -1,0 +1,23 @@
+import java.io.ObjectInputStream.GetField;
+import java.util.Scanner;
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner Scanner = new Scanner(System.in);
+		System.out.println("DIGITE A QUANTIDADE DE NÚMEROS IMPARES: ");
+		int qt = Scanner.nextInt();
+		int cont = 0;
+		int soma = 0;
+		
+		for (int n = 1;cont < qt ;n++ ){
+			if (n % 2 != 0){
+			    soma += n;
+			    cont++;
+			} 
+		}
+		System.out.println("A SOMA DOS PRIMEIROS NÚMEROS IMPARES É: " + soma);
+		
+		Scanner.close();
+	}
+}

@@ -1,0 +1,22 @@
+import java.io.ObjectInputStream.GetField;
+import java.util.Scanner;
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner Scanner = new Scanner(System.in);
+		System.out.println("DIGITE A IDADE: ");
+		int idade = Scanner.nextInt();
+		
+		if (idade < 18){
+			System.out.println("MENOR DE IDADE");
+		}
+		else if(idade < 60){
+		    System.out.println("ADULTO");
+		}
+		else{
+		    System.out.println("IDOSO");
+		}
+		Scanner.close();
+	}
+}

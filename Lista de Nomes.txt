@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main
+{
+	 public static void main(String[] args) {
+    	Scanner Scanner = new Scanner(System.in);
+    	
+        String[] nomes = new String[5];
+        
+        for (int i = 0;i < 5 ;i++ ){
+            System.out.println("DIGITE UM NOME: ");
+             nomes[i] = Scanner.nextLine();
+        } 
+        
+        System.out.println("DIGITE OUTRO NOME: ");
+        String outroNome = Scanner.nextLine();
+        boolean encontrado = false;
+        
+         for (int i = 0;i < 5 ;i++ ){
+            if (nomes[i].equalsIgnoreCase(outroNome)){
+                encontrado = true;
+                break;
+            } 
+        }    
+        if (encontrado){
+            System.out.println("O ÚTIMO NOME ESTÁ NA LISTA DOS 5!");
+        }
+        else{
+            System.out.println("O ÚTIMO NOME NÃO ESTÁ NA LISTA DOS 5!");
+        }
+    }
+}    

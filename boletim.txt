@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class Main
+{
+	 public static void main(String[] args) {
+    	Scanner Scanner = new Scanner(System.in);
+    	System.out.println("DIGITE A QUANTIDADE DE DICIPLINAS: ");
+    	int qtdici = Scanner.nextInt();
+    	Scanner.nextLine();
+    	
+    	System.out.println("DIGITE A MÉDIA PARA APROVAÇÃO: ");
+    	double mediaMin = Scanner.nextDouble();
+    	Scanner.nextLine();
+    	
+    	String[] nomeDici = new String[qtdici];
+    	double[] nP1 = new double[qtdici];
+    	double[] nP2 = new double[qtdici];
+    	double[] nT = new double[qtdici];
+    	
+    	for (int i = 0;i < qtdici ;i++ ){
+    	    System.out.println("DIGITE O NOME DA DICIPLINA "+(i=1)+":");
+    	    nomeDici[i] = Scanner.nextLine();
+    	    
+    	    System.out.println("DIGITE A NOTA DA P1:");
+    	    nP1[i] = Scanner.nextDouble();
+    	    System.out.println("DIGITE A NOTA DA P2:");
+    	    nP2[i] = Scanner.nextDouble();
+    	    System.out.println("DIGITE A NOTA DO TRABALHO:");
+    	    nT[i] = Scanner.nextDouble();
+    	    Scanner.nextLine();
+    	} 
+    	
+    	    System.out.println("\nBOLETIM DO ALUNO:\n");
+    	    for (int i=0;i<qtdici ;i++ ){
+    	        double media = (nP1[i] + nP2[i] + nT[i])/3.0;
+    	        String situacao = media >= mediaMin?"APROVADO" : "REPROVADO";
+    	        
+    	        System.out.println("DICIPLINA " + nomeDici[i]);
+    	        System.out.println("MÉDIA " + media);
+    	        System.out.println("SITUAÇÃO " + situacao);
+    	        System.out.println();
+    	    } 
+       
+        
+            
+            
+            
+        }   
+} 

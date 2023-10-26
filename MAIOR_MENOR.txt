@@ -1,0 +1,29 @@
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Random random = new Random();
+	    int tamArrey = 15;
+	    int[] nAleatorios = new int[tamArrey];
+	    for (int i = 0;i < tamArrey ;i++ ){
+	        nAleatorios[i] = random.nextInt(20) + 1;
+	    } 
+	    int maior = nAleatorios[0];
+	    int menor = nAleatorios[0];
+	    
+	    for (int n : nAleatorios){
+		    if (n > maior){
+		        maior = n;
+		    }
+		    if (n < menor){
+		        menor = n;
+		    } 
+		} 
+		System.out.println("NÚMEROS ALEATÓRIOS: ");
+		for (int n : nAleatorios){
+		    System.out.println(n + "");
+		}
+		System.out.println("\nMAIOR VALOR: " + maior);
+		System.out.println("\nMENOR VALOR: " + menor);
+	}
+}
