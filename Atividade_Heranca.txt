@@ -1,0 +1,97 @@
+
+class Funcionario {
+    public String nome;
+    public double salario;
+
+    public Funcionario(String nome, double salario) {
+        this.nome = nome;
+        this.salario = salario;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    
+    public void baterPonto() {
+        System.out.println("Funcionário " + nome + " bateu o ponto.");
+    }
+}
+
+
+class Gerente extends Funcionario {
+    public String departamento;
+
+    public Gerente(String nome, double salario, String departamento) {
+        super(nome, salario);
+        this.departamento = departamento;
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    
+   
+    public void fecharOCaixa() {
+        System.out.println("Gerente " + getNome() + " está fechando o caixa.");
+    }
+}
+
+
+class Vendedor extends Funcionario {
+    private double comissao;
+
+    public Vendedor(String nome, double salario, double comissao) {
+        super(nome, salario);
+        this.comissao = comissao;
+    }
+
+    public double getComissao() {
+        return comissao;
+    }
+
+   
+    public void realizarVenda() {
+        System.out.println("Vendedor " + getNome() + " está realizando uma venda.");
+    }
+}
+
+
+class Faxineiro extends Funcionario {
+    public Faxineiro(String nome, double salario) {
+        super(nome, salario);
+    }
+
+    
+    public void limpar() {
+        System.out.println("Faxineiro " + getNome() + " está realizando a limpeza.");
+    }
+
+    public void solicitarMaterial() {
+        System.out.println("Faxineiro " + getNome() + " está solicitando material de limpeza.");
+    }
+}
+
+
+public class ExemploEmpresa {
+    public static void main(String[] args) {
+        
+        Gerente gerente = new Gerente("João", 5000, "TI");
+        Vendedor vendedor = new Vendedor("Maria", 3000, 500);
+        Faxineiro faxineiro = new Faxineiro("Pedro", 1500);
+
+        
+       
+        vendedor.realizarVenda();
+        faxineiro.limpar();
+
+        
+        gerente.fecharOCaixa();
+        faxineiro.solicitarMaterial();
+    }
+}
